@@ -1,6 +1,12 @@
 body {
     font-family: helvetica neue;
-    background-color: #E7EAEC;
+    font-size: 26px;
+    line-height: 1.5;
+    background-color: #FFFFFF;
+}
+
+p {
+    font-family: Georgia;
 }
 
 .page h1,
@@ -15,9 +21,10 @@ body {
     height: 2px;
     background-color: #E6E7E8;
     border: none;
-    border-bottom: solid 1px #FFFFFF;
+    border-bottom: solid 1px #E7EAEC;
 }
 
+/*
 .frame {
     position:absolute;
     top:30px;
@@ -28,7 +35,7 @@ body {
     border: 1px solid #BCBEC0;
     border-radius: 4px;
 }
-
+*/
 .page {
     float: left;
     -webkit-transform:translate3d(0,0,0);
@@ -51,8 +58,8 @@ body {
     z-index:1;
     top:0px;
     bottom:0px;
-    left:0px;
-    right:0px;
+    left:20px;
+    right:20px;
     overflow:auto;
 }
 
@@ -61,4 +68,26 @@ body {
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	width:100%;
 	padding:0;
+}
+
+.header, .footer {
+    height: 40px;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.1;
+    z-index: 2;
+}
+
+.header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+.footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
 }
