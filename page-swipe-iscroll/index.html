@@ -12,7 +12,7 @@
 
         <div id="pageWrapper">
             <div id="pageScroller">
-                <div class="page" >
+                <div class="page">
                     <h1>Page 1</h1>
                     <hr/>
                     <br/>
@@ -24,12 +24,16 @@
                 </div>
 
                 <div class="page" >
-                    <h1>Page 2</h1>
-                    <hr/>
-                    <img src="picture.jpg" width="100%"/>
+                    <div id="wrapper2" class="wrapper">
+                        <div class="scroller">
+                            <h1>Page 2</h1>
+                            <hr/>
+                            <img src="picture.jpg" width="100%"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="page" >
-                    <div id="wrapper">
+                <div class="page">
+                    <div id="wrapper3" class="wrapper">
                         <div class="scroller">
                             <h1 class="milestone">Page 3</h1>
                             <hr/>
@@ -82,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="page" >
+                <div class="page">
                     <h1>Page 4</h1>
                     <hr/>
                     <div style="width:100%;text-align:center;">
@@ -95,10 +99,7 @@
     <div class="footer">
     </div>
 
-<script src="jquery-1.7.2.min.js"></script>
-<script src="iscroll.js"></script>
-<script src="scroll.js"></script>
-<script src="live.js"></script>
+    <script data-main="js/main" src="js/require-jquery.js"></script>
 
 </body>
 

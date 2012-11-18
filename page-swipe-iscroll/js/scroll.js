@@ -21,11 +21,13 @@ function updateLayout() {
     }
 
     wrapperWidth = $('#pageWrapper').width();
-
-    $('#pageScroller').css('width', wrapperWidth * 4);
+    var pages =$('.page').length;
+    $('#pageScroller').css('width', wrapperWidth * pages);
     $('.page').css('width', wrapperWidth - 40);
     myScroll.refresh();
     myScroll.scrollToPage(currentPage, 0, 0);
 }
 
-page3Scroll = new iScroll('wrapper', {snap: '.milestone', snapThreshold: 1, hScrollbar: false, vScrollbar: false, lockDirection: true });
+var scrollers = [];
+scrollers.push( new iScroll('wrapper2', {hScrollbar: false, vScrollbar: false, lockDirection: true }) );
+scrollers.push( new iScroll('wrapper3', {hScrollbar: false, vScrollbar: false, lockDirection: true }) );
