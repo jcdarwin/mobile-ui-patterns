@@ -5,10 +5,6 @@ body {
     background-color: #FFFFFF;
 }
 
-p {
-    font-family: Georgia;
-}
-
 .page h1,
 .page h2
 {
@@ -73,8 +69,7 @@ p {
 .header, .footer {
     height: 40px;
     width: 100%;
-    background-color: #000000;
-    opacity: 0.1;
+    background-color: #E6E7E8;
     z-index: 2;
 }
 
@@ -90,4 +85,26 @@ p {
     bottom: 0;
     left: 0;
     margin-top: 0;
+}
+
+.icon {
+    color: #ffffff;
+    margin-top:5px;
+    width:30px;height:30px;border-radius:15px;font-size:20px;line-height:27px;text-align:center;background:#000;
+}
+
+.sans {
+    font-family: Arial;
+    font-weight: bold;
+    float:right;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.serif {
+    font-family: Georgia;
+    font-weight: bold;
+    float:right;
+    margin-right: 10px;
+    cursor: default;
 }
