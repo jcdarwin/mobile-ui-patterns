@@ -20,18 +20,6 @@ body {
     border-bottom: solid 1px #E7EAEC;
 }
 
-/*
-.frame {
-    position:absolute;
-    top:30px;
-    right:50px;
-    bottom:20px;
-    left:50px;
-    background-color: #F1F2F2;
-    border: 1px solid #BCBEC0;
-    border-radius: 4px;
-}
-*/
 .page {
     float: left;
     -webkit-transform:translate3d(0,0,0);
@@ -45,8 +33,9 @@ body {
     overflow:hidden;
     top:20px;
     right:20px;
-    bottom:20px;
+    bottom:0;
     left:20px;
+    padding-bottom: 20px;
 }
 
 .wrapper {
@@ -66,7 +55,7 @@ body {
 	padding:0;
 }
 
-.header, .footer {
+.header {
     height: 40px;
     width: 100%;
     background-color: #E6E7E8;
@@ -80,11 +69,16 @@ body {
     margin-top: 0;
 }
 
-.footer {
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    margin-top: 0;
+.controls{
+    font-size: 16px;
+}
+.size, .lh {
+    float: left;
+    margin-right: 15px;
+}
+
+.size label, .lh label {
+    display: block;
 }
 
 .icon {

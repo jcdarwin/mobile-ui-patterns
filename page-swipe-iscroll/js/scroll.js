@@ -37,10 +37,55 @@ $(function() {
         // Switch stylesheet from sans to serif (i.e. body text)
         $('link[title=sans]')[0].disabled=true;
         $('link[title=serif]')[0].disabled=false;
+        setTimeout(function () {
+            $.each(scrollers, function() {
+                this.refresh();
+            });
+        }, 0);
     });
     $('.sans').click(function(){
         // Switch stylesheet from serif to sans (i.e. body text)
         $('link[title=sans]')[0].disabled=false;
         $('link[title=serif]')[0].disabled=true;
+        setTimeout(function () {
+            $.each(scrollers, function() {
+                this.refresh();
+            });
+        }, 0);
     });
+});
+
+
+//fontsize change
+
+$('#psize').on('change', function() {
+    var elem = $(this).attr('id').split('size')[0];
+    var value = $(this).val();
+    $(elem).css('font-size', value + 'px');
+    $(this).next('span.value').text(value);
+});
+
+$('#psize').on('mouseup touchend', function() {
+    setTimeout(function () {
+        $.each(scrollers, function() {
+            this.refresh();
+        });
+    }, 0);
+});
+
+//line-height change
+
+$('#plh').on('change', function() {
+    var elem = $(this).attr('id').split('lh')[0];
+    var value = parseFloat($(this).val()).toFixed(2); // keeps the range to outputing two decimal places
+    $(elem).css('line-height', $(this).val());
+    $(this).next('span.value').text(value);
+});
+
+$('#plh').on('mouseup touchend', function() {
+    setTimeout(function () {
+        $.each(scrollers, function() {
+            this.refresh();
+        });
+    }, 0);
 });
