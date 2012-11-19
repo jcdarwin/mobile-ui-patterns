@@ -69,22 +69,43 @@ body {
     margin-top: 0;
 }
 
-.controls{
-    font-size: 16px;
+.controls {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    -webkit-user-select: none;
 }
+
 .size, .lh {
     float: left;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .size label, .lh label {
-    display: block;
+/*    display: block; */
 }
 
 .icon {
     color: #ffffff;
     margin-top:5px;
-    width:30px;height:30px;border-radius:15px;font-size:20px;line-height:27px;text-align:center;background:#000;
+    display:inline-block;
+    width:30px;height:30px;border-radius:15px;text-align:center;background:#000;
+    line-height: 30px;
+}
+
+.status {
+    float:right;
+    margin-right: 10px;
+    cursor: default;
+    width: 70px;
+}
+
+.online {
+    background-color: #56A2D3;
+}
+
+.offline {
+    background-color: #BCBEC0;
 }
 
 .sans {

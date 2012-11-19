@@ -33,6 +33,7 @@ scrollers.push( new iScroll('wrapper2', {hScrollbar: false, vScrollbar: false, l
 scrollers.push( new iScroll('wrapper3', {hScrollbar: false, vScrollbar: false, lockDirection: true }) );
 
 $(function() {
+
     $('.serif').click(function(){
         // Switch stylesheet from sans to serif (i.e. body text)
         $('link[title=sans]')[0].disabled=true;
@@ -43,6 +44,7 @@ $(function() {
             });
         }, 0);
     });
+
     $('.sans').click(function(){
         // Switch stylesheet from serif to sans (i.e. body text)
         $('link[title=sans]')[0].disabled=false;
@@ -53,6 +55,24 @@ $(function() {
             });
         }, 0);
     });
+
+    function check_status() {
+        var status = navigator.onLine ? 'online' : 'offline';
+        if ( status == 'online' ) {
+            $('.status').removeClass('offline');
+        } else {
+            $('.status').removeClass('online');
+        }
+        $('.status').text(status);
+        $('.status').addClass(status);
+    }
+
+    // Check online status immediately, instead of waiting for the first setInterval
+    check_status();
+
+    // Check online status on a regular interval
+    setInterval( check_status, 1000);
+
 });
 
 
